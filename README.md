@@ -15,6 +15,13 @@ Military Grade .NET Obfuscator Tool
 - Windows OS
 - .NET Runtime 10.0 or higher
 
+---
+
+## How TO Download?
+Go To https://github.com/RussiannHarvey/NET-ARMOR/releases/tag/files
+-
+and download ZIP File
+
 ## How to Use
 
 1. Drag & drop your .exe or .dll file into the window
