@@ -21,7 +21,7 @@ Military Grade .NET Obfuscator Tool
 2. Select protection modules (all enabled by default)
 3. Choose encryption level (1=Light to 5=Maximum)
 4. Click "INITIATE PROTECTION"
-5. Find your protected file with "_NEBULA_PROTECTED" suffix
+5. Find your protected file with "_NET_ARMOR" suffix
 
 ## Output
 
