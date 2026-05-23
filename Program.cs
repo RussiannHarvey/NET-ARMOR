@@ -20,7 +20,7 @@
  * 
  * ============================================
  * Author: RussianHarvey
- * GitHub: https://github.com/RussiannHarvey
+ * GitHub: https://github.com/Uxz7
  * Discord UserName: russianharvey
  * Version: 1.0.0
  * ============================================
