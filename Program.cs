@@ -20,7 +20,7 @@
  * 
  * ============================================
  * Author: RussianHarvey
- * GitHub: https://github.com/RussiannHarvey
+ * GitHub: https://github.com/Uxz7
  * Version: 2.0.0 (Enhanced Protection - Optimized)
  * ============================================
  */
