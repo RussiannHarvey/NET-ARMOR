@@ -80,9 +80,9 @@ namespace DotNetObfuscator
 
         private void InitializeComponent()
         {
-            this.FormBorderStyle = FormBorderStyle.Sizable;  // تغيير ليصبح قابل للتحجيم
-            this.MaximizeBox = true;  // تفعيل زر التكبير
-            this.MinimumSize = new Size(950, 700);  // حجم أدنى أكبر
+            this.FormBorderStyle = FormBorderStyle.Sizable;                     
+            this.MaximizeBox = true;  
+            this.MinimumSize = new Size(950, 700);
             this.BackColor = Color.FromArgb(45, 45, 48);
             this.Size = new Size(1100, 650);  
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -158,7 +158,7 @@ namespace DotNetObfuscator
             {
                 Text = " Input Assembly ",
                 Location = new Point(0, yOffset),
-                Size = new Size(1050, 90),  // زيادة العرض
+                Size = new Size(1050, 90), 
                 ForeColor = Color.FromArgb(210, 210, 215),
                 Font = new Font("Segoe UI", 9, FontStyle.Bold)
             };
@@ -166,7 +166,7 @@ namespace DotNetObfuscator
             txtFilePath = new TextBox()
             {
                 Location = new Point(15, 30),
-                Size = new Size(870, 27),  // زيادة العرض
+                Size = new Size(870, 27), 
                 BackColor = Color.FromArgb(30, 30, 35),
                 ForeColor = Color.FromArgb(210, 210, 215),
                 BorderStyle = BorderStyle.FixedSingle,
@@ -823,10 +823,9 @@ namespace DotNetObfuscator
                     var instructions = method.Body.Instructions;
                     if (instructions.Count < 5) continue;
                     
-                    // تقليل النسبة لتجنب التضخم
                     for (int i = 0; i < instructions.Count - 2; i++)
                     {
-                        if (random.Next(0, 100) < 15)  // من 30% إلى 15%
+                        if (random.Next(0, 100) < 15)  
                         {
                             var originalInstr = instructions[i];
                             var condition = Instruction.Create(OpCodes.Ldc_I4_0);
@@ -944,7 +943,7 @@ namespace DotNetObfuscator
                     int proxyCountForMethod = 0;
                     for (int i = 0; i < method.Body.Instructions.Count - 3 && proxyCountForMethod < 30; i += random.Next(3, 8))
                     {
-                        if (random.Next(0, 100) < 30)  // تقليل النسبة
+                        if (random.Next(0, 100) < 30)  
                         {
                             var tempVar = new Local(module.CorLibTypes.Object);
                             method.Body.Variables.Add(tempVar);
@@ -973,7 +972,7 @@ namespace DotNetObfuscator
                     if (resource is EmbeddedResource embeddedResource)
                     {
                         var data = embeddedResource.CreateReader().ToArray();
-                        if (data != null && data.Length > 0 && data.Length < 1024 * 1024) // فقط للملفات أقل من 1 ميجابايت
+                        if (data != null && data.Length > 0 && data.Length < 1024 * 1024) 
                         {
                             string encrypted = AESEncrypt(Convert.ToBase64String(data), GenerateKey(random));
                             var newResource = new EmbeddedResource(resource.Name + "_enc", Encoding.UTF8.GetBytes(encrypted));
@@ -1005,7 +1004,6 @@ namespace DotNetObfuscator
                 {
                     if (!method.HasBody || method.Body == null) continue;
                     
-                    // تقليل الكم بناءً على مستوى الجانك
                     int injections = Math.Min(level * random.Next(1, 3), 20);
                     
                     for (int j = 0; j < injections; j++)
